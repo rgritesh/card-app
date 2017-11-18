@@ -1,0 +1,9 @@
+<div *ngIf="userTodo" class="card">
+  <h2 class="card-title">{{ userTodo.title | uppercase }} </h2>
+  <span class="label label-info">{{userTodo.id}}</span>
+ <div class="form-group">
+            <label for="formFields_1">Todo:</label>
+            <input [(ngModel)]="userTodo.title" type="text" id="todo" placeholder="Titile">
+            
+        </div>
+</div>

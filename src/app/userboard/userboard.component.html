@@ -1,0 +1,22 @@
+<div *ngFor="let user of users" class="card">
+        <div   class="card-block">
+            <h3 class="card-title">{{user.name}}</h3>
+            <span class="label label-info">{{user.username}}</span>
+            <span class="label label-info">{{user.email}}</span>
+            <p class="card-text">
+                Address: {{user.address.street}} {{user.address.suite}} {{user.address.city}} {{user.address.zipcode}}
+            </p>
+             <p class="card-text">
+                Phone: {{user.phone}}
+            </p>
+             <p class="card-text">
+                Website:  <span class="label label-info">{{user.website}}</span>
+            </p>
+             <p class="card-text">
+                Company: {{user.company.name}} 
+            </p>
+        </div>
+        <div class="card-footer">
+            <a  routerLink="/todo/{{user.id}}" class="btn btn-primary">Action</a>
+        </div>
+    </div>
